@@ -16,5 +16,3 @@
     );
 
     file_put_contents('tabuleiro.json', json_encode($tabuleiro));
-
-?>

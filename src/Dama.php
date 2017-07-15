@@ -6,9 +6,12 @@
  * Date: 15/07/2017
  * Time: 13:17
  */
+
+namespace SRC;
+
 class Dama extends Peca
 {
-    public function movimentar()
+    final public function movimentar()
     {
         // TODO: Implement movimentar() method.
     }
