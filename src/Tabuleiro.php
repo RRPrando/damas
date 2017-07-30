@@ -35,6 +35,13 @@ class Tabuleiro implements TabuleiroInterface
         file_put_contents('tabuleiro.json', json_encode($tabuleiro));
     }
 
+    public static function importarTabuleiro()
+    {
+        $tabuleiro = file_get_contents('tabuleiro.json');
+        $tabuleiro = json_decode($tabuleiro, true);
+        return $tabuleiro;
+    }
+
     public static function montarHTML($tabuleiro)
     {
         $html = "<table border=1>";

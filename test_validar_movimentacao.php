@@ -1,5 +1,8 @@
 <?php
 
+$jogo = new \SRC\Jogo();
+$jogo->iniciarJogo();
+
 $tabuleiro = '[[" ","B"," ","B"," ","B"," ","B"],
               ["B"," ","B"," ","B"," ","B"," "],
               [" ","B"," ","B"," ","B"," ","B"],

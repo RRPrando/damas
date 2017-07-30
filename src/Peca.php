@@ -11,33 +11,48 @@ namespace SRC;
 
 abstract class Peca implements PecaInterface
 {
-    public $cor;
-    public $posicao;
+    protected $cor;
+    protected $origem;
+    protected $destino;
+    protected $tabuleiro;
 
     /**
      * Peca constructor.
      * @param $cor
      */
-    public function __construct($cor)
+    public function __construct($cor, Tabuleiro $tabuleiro)
     {
         $this->cor = $cor;
+        $this->tabuleiro = $tabuleiro;
     }
     /**
      * @return mixed
      */
-    public function getPosicao()
+    public function getOrigem()
     {
-        return $this->posicao;
+        return $this->origem;
     }
     /**
-     * @param mixed $posicao
+     * @param mixed $origem
      */
-    public function setPosicao($posicao)
+    public function setOrigem($origem)
     {
-        $this->posicao = $posicao;
+        $this->origem = $origem;
+    }
+    /**
+     * @return mixed
+     */
+    public function getDestino()
+    {
+        return $this->destino;
+    }
+    /**
+     * @param mixed $destino
+     */
+    public function setDestino($destino)
+    {
+        $this->destino = $destino;
     }
 
-    public function movimentar()
-    {
-    }
+    public function movimentar(){}
 }

@@ -13,5 +13,6 @@ interface TabuleiroInterface
 {
     public static function montarTabuleiro();
     public static function exportarTabuleiro($tabuleiro);
+    public static function importarTabuleiro();
     public static function montarHTML($tabuleiro);
 }
