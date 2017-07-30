@@ -8,13 +8,12 @@
 
 namespace SRC;
 
-
 interface JogoInterface
 {
     public function iniciarJogo();
-    public function validar_movimentacao($origem, $destino, $array);
-    public function posicao_existente($origem, $destino, $array);
-    public function posicao_vazia($origem, $destino, $array);
-    public function posicao_valida($origem, $destino, $array);
-    public function movimentacao_diagonal_frente($origem, $destino, $array);
+    public function validarMovimentacao($origem, $destino, $array);
+    public function posicaoExistente($origem, $destino, $array);
+    public function posicaoVazia($origem, $destino, $array);
+    public function posicaoValida($origem, $destino, $array);
+    public function movimentacaoDiagonalFrente($origem, $destino, $array);
 }

@@ -8,7 +8,6 @@
 
 namespace SRC;
 
-
 class Jogo implements JogoInterface
 {
     private $pecasPretas;
@@ -40,7 +39,7 @@ class Jogo implements JogoInterface
         $tabuleiro = Tabuleiro::montarTabuleiro();
         $this->pecasPretas = array();
         $this->pecasBrancas = array();
-        for ($i=1;$i==8;$i++) {
+        for ($i=1; $i==8; $i++) {
             $this->pecasPretas[] = new Peao("P");
             $this->pecasBrancas[] = new Peao("B");
         }
@@ -48,7 +47,7 @@ class Jogo implements JogoInterface
         return $tabuleiro;
     }
 
-    public function validar_movimentacao($origem, $destino, $array)
+    public function validarMovimentacao($origem, $destino, $array)
     {
         if (posicao_existente($origem, $destino, $array) &&
             posicao_vazia($origem, $destino, $array) &&
@@ -60,7 +59,7 @@ class Jogo implements JogoInterface
         return false;
     }
 
-    public function posicao_existente($origem, $destino, $array)
+    public function posicaoExistente($origem, $destino, $array)
     {
         if (! isset($array[$origem[0]][$origem[1]])) {
             return false;
@@ -71,7 +70,7 @@ class Jogo implements JogoInterface
         return true;
     }
 
-    public function posicao_vazia($origem, $destino, $array)
+    public function posicaoVazia($origem, $destino, $array)
     {
         if (posicao_existente($origem, $destino, $array)) {
             if ($array[$origem[0]][$origem[1]] != " ") {
@@ -88,7 +87,7 @@ class Jogo implements JogoInterface
         return true;
     }
 
-    public function posicao_valida($origem, $destino, $array)
+    public function posicaoValida($origem, $destino, $array)
     {
         $posicoes_invalidas = array(
             "00", "02", "04", "06",
@@ -108,7 +107,7 @@ class Jogo implements JogoInterface
         return true;
     }
 
-    public function movimentacao_diagonal_frente($origem, $destino, $array)
+    public function movimentacaoDiagonalFrente($origem, $destino, $array)
     {
         if (! posicao_valida($origem, $destino, $array)) {
             return false;
@@ -129,5 +128,4 @@ class Jogo implements JogoInterface
 
         return true;
     }
-
 }

@@ -54,5 +54,7 @@ abstract class Peca implements PecaInterface
         $this->destino = $destino;
     }
 
-    public function movimentar(){}
+    public function movimentar()
+    {
+    }
 }
